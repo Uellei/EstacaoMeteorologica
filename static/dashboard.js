@@ -1,4 +1,24 @@
 const url = "https://6720-179-98-62-184.ngrok-free.app/dados"
+document.addEventListener('DOMContentLoaded', function() {
+    // Obtém o valor do parâmetro de consulta 'option' da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedOption = urlParams.get('option');
+
+    // Seleciona a opção correspondente no menu suspenso
+    const chartSelector = document.getElementById('chartSelector');
+    console.log(chartSelector)
+    if (selectedOption) {
+        // Define o valor da opção desejada
+        const novaOpcao = selectedOption;
+
+        // Altera a opção selecionada
+        chartSelector.value = novaOpcao;
+
+        // Dispara o evento 'change'
+        const eventoChange = new Event('change');
+        chartSelector.dispatchEvent(eventoChange);
+    }
+});
 
 const chartSelector = document.getElementById("chartSelector");
 const charts = document.querySelectorAll(".chart");

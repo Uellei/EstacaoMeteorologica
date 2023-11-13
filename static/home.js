@@ -1,4 +1,4 @@
-const url = "http://192.168.15.10:5000"
+const url = "https://6720-179-98-62-184.ngrok-free.app/dados"
 
 let menuToggle = document.querySelector(".menuToggle")
 let sidebar = document.querySelector(".sidebar")
@@ -337,7 +337,7 @@ function changeChartOptions(grandezaOption) {
 
 // REQUISIÇÃO
 function fetchData() {
-    return fetch(`${url}/dados`)
+    return fetch(`${url}`)
     .then(response => {
         if(!response.ok) {
             throw new Error("Erro ao obter os dados")
@@ -362,9 +362,9 @@ function updateDOM(data) {
     const temp = data.Temperatura.data[data.Temperatura.data.length - 1]
     console.log(temp)
     document.getElementById('weather-temp').textContent = temp
-    document.querySelector("#weather-icon > img").src = temp > 32 ? imgTemp[0] : imgTemp[1]
-    document.getElementById('weather-condition').textContent = temp > 32 ? "Ensolarado" : "Nublado"
-    document.getElementById('weather-sensation').textContent = temp < 35 ? `${33}°C` : +temp - 1 + "°C"
+    document.querySelector("#weather-icon > img").src = temp < 32 ? imgTemp[1] : imgTemp[0]
+    document.getElementById('weather-condition').textContent = temp < 32 ? "Nublado" : "Ensolarado"
+    document.getElementById('weather-sensation').textContent = temp < 35 ? `${33}°C` : temp ? +temp - 1 + "°C" : ""
     document.getElementById("weather-wind").textContent = data.Rotacao.data[data.Rotacao.data.length - 1]
     document.getElementById("weather-umid").textContent = data.Umidade.data[data.Umidade.data.length - 1]
 }
