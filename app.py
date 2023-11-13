@@ -42,6 +42,10 @@ def home():
 def dashboard():
     return render_template("dashboard.html")
 
+@app.route("/AboutUs.html")
+def about():
+    return render_template("AboutUs.html")
+
 # @app.route('/dados-enviador', methods=['GET', 'POST'])
 # def minha_paginaa():
 #     if request.method == 'GET':

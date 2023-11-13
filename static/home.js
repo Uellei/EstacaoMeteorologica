@@ -45,7 +45,7 @@ var tempOptions = {
     series: [
         {
         name: "Umidade",
-        data: [25.5, 27, 28.6, 24, 26, 29, 30, 30.5, 29.5, 31]
+        data: [30, 31, 28, 27, 29, 39, 37, 36, 36, 35]
         }
     ],
     fill: {
@@ -62,7 +62,7 @@ var tempOptions = {
         strokeWidth: 3
       },
     xaxis: {
-        categories: ["6h", "7h", "8h", "9h", "10h", "11h", "12h", "13h", "14h", "15h"]
+        categories: ["9h", "10h", "11h", "12h", "13h", "14h", "15h", "16h", "17h", "18h"]
     },
     tooltip: {
         theme: "dark",
@@ -106,8 +106,8 @@ var umidOptions = {
     },
     series: [
         {
-        name: "Temperatura",
-        data: [35.5, 27, 28.6, 24, 26, 29, 30, 30.5, 29.5, 41]
+        name: "Umidade",
+        data: [30, 27, 28, 29, 27, 25, 24, 22, 21, 20]
         }
     ],
     fill: {
@@ -124,7 +124,7 @@ var umidOptions = {
         strokeWidth: 3
       },
     xaxis: {
-        categories: ["6h", "7h", "8h", "9h", "10h", "11h", "12h", "13h", "14h", "15h"]
+        categories: ["9h", "10h", "11h", "12h", "13h", "14h", "15h", "16h", "17h", "18h"]
     },
     tooltip: {
         theme: "dark",
@@ -168,8 +168,8 @@ var pressOptions = {
     },
     series: [
         {
-        name: "Temperatura",
-        data: [35.5, 27, 28.6, 24, 26, 29, 30, 30.5, 29.5, 48]
+        name: "Pressão",
+        data: [900, 920, 960, 940, 910, 930, 970, 976, 971, 990]
         }
     ],
     fill: {
@@ -186,7 +186,7 @@ var pressOptions = {
         strokeWidth: 3
       },
     xaxis: {
-        categories: ["6h", "7h", "8h", "9h", "10h", "11h", "12h", "13h", "14h", "15h"]
+        categories: ["9h", "10h", "11h", "12h", "13h", "14h", "15h", "16h", "17h", "18h"]
     },
     tooltip: {
         theme: "dark",
@@ -230,8 +230,8 @@ var lxOptions = {
     },
     series: [
         {
-        name: "Temperatura",
-        data: [35.5, 27, 28.6, 24, 26, 29, 30, 30.5, 29.5, 41]
+        name: "Luminosidade",
+        data: [100, 120, 130, 164, 176, 140, 120, 113, 80, 75]
         }
     ],
     fill: {
@@ -248,7 +248,7 @@ var lxOptions = {
         strokeWidth: 3
       },
     xaxis: {
-        categories: ["6h", "7h", "8h", "9h", "10h", "11h", "12h", "13h", "14h", "15h"]
+        categories: ["9h", "10h", "11h", "12h", "13h", "14h", "15h", "16h", "17h", "18h"]
     },
     tooltip: {
         theme: "dark",
@@ -293,7 +293,7 @@ var rotOptions = {
     series: [
         {
         name: "Temperatura",
-        data: [35.5, 27, 28.6, 24, 26, 29, 30, 30.5, 29.5, 41]
+        data: [130, 170, 128, 125, 110, 100, 80, 210, 230, 160]
         }
     ],
     fill: {
@@ -310,7 +310,7 @@ var rotOptions = {
         strokeWidth: 3
       },
     xaxis: {
-        categories: ["6h", "7h", "8h", "9h", "10h", "11h", "12h", "13h", "14h", "15h"]
+        categories: ["9h", "10h", "11h", "12h", "13h", "14h", "15h", "16h", "17h", "18h"]
     },
     tooltip: {
         theme: "dark",
@@ -363,8 +363,8 @@ function updateDOM(data) {
     console.log(temp)
     document.getElementById('weather-temp').textContent = temp
     document.querySelector("#weather-icon > img").src = temp < 32 ? imgTemp[1] : imgTemp[0]
-    document.getElementById('weather-condition').textContent = temp < 32 ? "Nublado" : "Ensolarado"
-    document.getElementById('weather-sensation').textContent = temp < 35 ? `${33}°C` : temp ? +temp - 1 + "°C" : ""
+    document.getElementById('weather-condition').textContent = "Poucas Nuvens" 
+    document.getElementById('weather-sensation').textContent = temp < 35 ? `${temp - 1}°C` : temp ? +temp - 1 + "°C" : ""
     document.getElementById("weather-wind").textContent = data.Rotacao.data[data.Rotacao.data.length - 1]
     document.getElementById("weather-umid").textContent = data.Umidade.data[data.Umidade.data.length - 1]
 }

@@ -267,7 +267,6 @@ li.item:nth-child(2) {
     -webkit-text-size-adjust: 100%;
     color: #000;
     transition: .5s;
-
 }
 
 .sidebar.active + .container .row{
@@ -901,4 +900,170 @@ body {
     .card-temp > h2, .card-temp > span {
         font-size: 30px;
     }
+
+    section .linha {
+        display: initial;
+        margin: initial;
+    }
+
+    section .about-1 h1 {
+        margin-top: 20vw;
+    }
+    
+    div .col-md-4 {
+        width: 100vw; /* Ajuste a largura para ocupar a largura total da tela */
+        margin-bottom: 20px; /* Adicione uma margem inferior entre os itens */
+        background-color: #fff;
+        height: 120vw;
+    }
+    
+    /* Remova as regras de estilos específicas para hover e ajuste para responsividade */
+    .about-item {
+        padding: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .about-item h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: center; /* Centralize o texto */
+    }
+    
+    .about-item hr {
+        width: 30px;
+        height: 3px;
+        background-color: #5fbff9;
+        margin: 0 auto;
+        border: none;
+    }
+    
+    .about-item p {
+        margin-top: 10px;
+        text-align: center; /* Centralize o texto */
+    }
+    
+    div .about-item:hover {
+        height: 120vw; /* Tornar a altura automática para acomodar o conteúdo */
+        background-color: #5fbff9;
+    }
+    
+    .about-item:hover h3,
+    .about-item:hover p {
+        color: #fff;
+        transition: all .4s ease-in-out;
+    }
+    
+    .about-item:hover hr {
+        background-color: #fff;
+    }
+    
+}
+
+/* ABOUT US*/
+section.container {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 80px;
+    margin-left: 90px;
+    overflow: hidden;
+    line-height: 1.15;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+    color: #000;
+    transition: .5s;
+}
+
+.col-md-4 {
+    width: 26vw;
+    height: 36vw;
+    background-color: #fff;
+}
+
+.about-1 {
+    padding-top: 5  0px;
+}
+
+.about-1 h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+.about-1 p{
+    text-align: center;
+    padding: 3px;
+    color: #fff;
+}
+
+.about-item {
+    /* background-color: white; */
+    padding: 40px 30px 80px 30px;
+    /* box-shadow: 0 0 2px rgba(0, 0, 0, .6); */
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-item i {
+    font-size: 43px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about-item h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.about-item h3:nth-child(2) {
+    padding: 0;
+}
+
+#about > div.about-2 > div > section > div > div:nth-child(3) > div > h3:nth-child(2) {
+    font-size: 0;
+    padding-top: 23px;
+}
+ 
+#about > div.about-2 > div > section > div > div:nth-child(2) > div > h3:nth-child(2) {
+    font-size: 0;
+    padding-top: 23px;
+}
+
+.about-item hr {
+    width: 46px;
+    height: 3px;
+    background-color: #5fbff9;
+    margin: 0 auto;
+    border: none;
+}
+
+.about-item p {
+    margin-top: 20px;
+}
+
+.about-item:hover {
+    height: 40vw;
+    background-color: #5fbff9;
+}
+
+.about-item:hover h3,
+.about-item:hover p {
+    color: #fff;
+    transition: all .4s ease-in-out;
+}
+
+.about-item:hover hr {
+    background-color: #fff;
+}
+
+.about-item:hover {
+    
 }
