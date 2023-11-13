@@ -1,3 +1,5 @@
+const url = "http://192.168.15.10:5000"
+
 let menuToggle = document.querySelector(".menuToggle")
 let sidebar = document.querySelector(".sidebar")
 menuToggle.onclick = function() {
@@ -333,7 +335,6 @@ function changeChartOptions(grandezaOption) {
     chart.updateOptions(grandezaOption);
 }
 
-const url = "http://192.168.15.10:5000"
 // REQUISIÇÃO
 function fetchData() {
     return fetch(`${url}/dados`)

@@ -13,7 +13,7 @@ dados = {
 # }
 
 # Defina a URL do endpoint onde o servidor Flask está escutando
-url = 'http://192.168.15.10:5000/dados'  # Atualize com a URL do seu servidor Flask
+url = 'https://6720-179-98-62-184.ngrok-free.app/dados'  # Atualize com a URL do seu servidor Flask
 
 # Faça uma solicitação POST para enviar os dados
 response = requests.post(url, json=dados)

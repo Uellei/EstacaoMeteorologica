@@ -408,7 +408,7 @@ img {
     border-radius: 3px;
 }
 
-.temp-text {
+.temp-text, .rot-text, .umid-text, .lx-text, .press-text{
     font-size: 12px;
     line-height: 18px;
     text-transform: uppercase;
@@ -417,42 +417,6 @@ img {
     padding: 5px;
 }
 
-
-.umid-text {
-    font-size: 12px;
-    line-height: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #404040;
-    padding: 5px;
-}
-
-.lx-text {
-    font-size: 12px;
-    line-height: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #404040;
-    padding: 5px;
-}
-
-.press-text {
-    font-size: 12px;
-    line-height: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #404040;
-    padding: 5px;
-}
-
-.rot-text {
-    font-size: 12px;
-    line-height: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #404040;
-    padding: 5px;
-}
 
 .p {
     font-size: 15px;
@@ -549,6 +513,9 @@ body {
     font-weight: 500;
     color: var(--clr);
 }
+.MenuList > li > a > .text {
+    font-size: 20px;
+}
 
 .sidebar ul li a{
     position: relative;
@@ -590,7 +557,6 @@ body {
 
 .sidebar ul li.active a .text {
     color: var(--bg);
-    
 }
 
 
@@ -757,4 +723,182 @@ body {
 .sidebar.active + .container > .cont > .charts-geral {
     transition: 0.5s;
     width: 50%;
+}
+
+
+/* MEDIA SCREEN*/
+
+@media screen and (max-width: 730px) {
+    /* BAR */
+    .grid-container {
+        display: flex;
+        height: initial;
+        flex-direction: column;
+        max-width: 100vh;
+    }
+    .MenuList {
+        display: flex;
+        justify-content: space-between;
+        width: 62vw;
+    }
+    .sidebar {
+        width: 100vh;
+        height: 8vh;
+        position: fixed; /* Torna a barra lateral fixa */
+        top: 0; /* Fixa no topo da tela */
+        left: 0; /* Fixa à esquerda da tela */
+        display: flex;
+        justify-content: space-between;
+        overflow: initial;
+        padding: initial;
+    }
+    body > div > div.sidebar > ul > div.bottom > li:nth-child(2) > a > div.text {
+        padding-right: 10px;
+        font-size: 20px;
+    }
+    .icon ion-icon{
+        display: none;
+    }
+    .menuToggle {
+        display: none;
+    }
+    .sidebar ul li.active a .icon::before {
+        content: initial;
+        position: initial;
+        inset: initial;
+        width: initial;
+        background: initial;
+        border-radius: inherit;
+        transition: initial;
+    }
+    body > div > div.sidebar > ul > div.MenuList > li > a > div.text {
+        font-size: 20px;
+    }
+    .bottom li:nth-child(1) {
+        display: none;
+    }
+    .sidebar ul li a .icon {
+        display: none;
+    }
+    .bottom {
+        position: initial;
+        width: initial;
+    }
+    .logo {
+        display: none;
+        align-items: center;
+    }
+    .container {
+        padding: initial;
+    }
+    .sidebar ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+    }
+    .sidebar a {
+        text-decoration: none;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .sidebar ul li.active {
+        background: initial; /* ou qualquer outra cor padrão desejada */
+        border-top-left-radius: initial;
+        border-bottom-left-radius: initial;
+    }
+    .sidebar ul li.active::before{
+        content: initial;
+        position: initial;
+        top: initial;
+        right: initial;
+        width: initial;
+        height: initial;
+        border-bottom-right-radius: initial;
+        box-shadow: initial;
+        background: initial;
+    }
+    .sidebar ul li.active::after {
+        content: initial;
+        position: initial;
+        bottom: initial;
+        right: initial;
+        width: initial;
+        height: initial;
+        border-top-right-radius: initial;
+        box-shadow: initial;
+        background: initial;
+    }
+
+    /* DADOS */
+    .container {
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        color: rgb(255, 255, 255, 0.95);
+        line-height: 1.15;
+        color: #000;
+        font-size: 15px;
+        outline: none;
+        width: 100%;
+        margin-top: 20vw;
+    }
+    .title {
+        margin-top: 10vw;
+        margin-bottom: 10vw;
+        font-size: 20px;
+        color: #fff;
+    }
+    .card-temp {
+        width: 100vw;
+        position: initial;
+        display: flex;
+        flex-direction: column;
+        height: 370px;
+    }
+    .charts-geral {
+        background-color: white;
+        height: 200px;
+        margin-left: 0;
+        margin-top: 10vw;
+        border-radius: 10px;
+    }
+    .cont {
+        display: flex;
+        flex-direction: column;
+    }
+    .buttons-charts {
+        padding-top: 5vw;
+    }
+    .row {
+        margin-top: 10vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .col-lg-4 {
+        height: 40vw;
+        width: 100vw;
+        padding: 0;
+    }
+    .card-inf li.item {
+        width: 90vw;
+    }
+    .temp-text, .rot-text, .umid-text, .lx-text, .press-text{
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #404040;
+        padding: 5px;
+    }
+    div.card-inf > ul > li > p, #temp-inf span[id*=weather], #temp-inf span._flex, .list-inf .wind, .list-inf .umid, .list-inf span[id*=weather], .more-details a{
+        font-size: 20px;
+    }
+    div.card-inf > ul > li > div > span[class*=identifier] {
+        height: 6vw;
+    }
+    .card-temp > h2, .card-temp > span {
+        font-size: 30px;
+    }
 }

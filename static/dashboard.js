@@ -1,4 +1,4 @@
-const url = "http://192.168.15.10:5000/dados"
+const url = "https://6720-179-98-62-184.ngrok-free.app/dados"
 
 const chartSelector = document.getElementById("chartSelector");
 const charts = document.querySelectorAll(".chart");
