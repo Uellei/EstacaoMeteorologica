@@ -1,4 +1,4 @@
-const url = "https://6720-179-98-62-184.ngrok-free.app/dados"
+const url = "https://edf9-2804-214-8594-a7c9-b88c-3938-f564-89ea.ngrok-free.app/dados"
 
 let menuToggle = document.querySelector(".menuToggle")
 let sidebar = document.querySelector(".sidebar")

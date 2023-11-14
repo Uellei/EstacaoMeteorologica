@@ -1,4 +1,4 @@
-const url = "https://6720-179-98-62-184.ngrok-free.app/dados"
+const url = "https://edf9-2804-214-8594-a7c9-b88c-3938-f564-89ea.ngrok-free.app/dados"
 document.addEventListener('DOMContentLoaded', function() {
     // Obtém o valor do parâmetro de consulta 'option' da URL
     const urlParams = new URLSearchParams(window.location.search);
@@ -280,7 +280,7 @@ var pressaoData = {
         },
         y: {
             formatter: function (val) {
-                return val + " bpm";
+                return val + " hPa";
             }
         },
         theme: "dark",
@@ -340,7 +340,7 @@ var rotacaoData = {
         },
         y: {
             formatter: function (val) {
-                return val + " hPa";
+                return val + " rpm";
             }
         },
         theme: "dark",
